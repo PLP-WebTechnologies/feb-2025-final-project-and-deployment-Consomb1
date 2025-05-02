@@ -4,8 +4,7 @@
 
 This project is a my  personal portfolio website  **Collins Atambo**, an Animal Scientist and Web Developer based in Chuka, Kenya. The portfolio showcases my skills, interests, education, projects, and programming language proficiency, while providing a way for visitors to contact me.
 
-The website is built using **HTML**, **CSS**, and **JavaScript**, with a focus on responsiveness and user experience. It includes downloadable access to my CV and links to my social media profiles. This project was developed as part of the PLP Academy Hackathon - Portfolio Challenge, demonstrating my web development abilities and creativity.
-
+The website is built using **HTML**, **CSS**, and **JavaScript**, with a focus on responsiveness and user experience. It includes downloadable access to my CV and links to my social media profiles.
 
 ## Portfolio Details
 
