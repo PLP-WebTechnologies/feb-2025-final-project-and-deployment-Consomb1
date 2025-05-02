@@ -1,0 +1,775 @@
+/* General Setup and Reset: Imports Google Fonts (Josefin Sans for headings and Merriweather for body text), 
+resets default browser styles for consistency, and sets the body background to a light beige color. 
+Also customizes the scrollbar with a peach track and teal thumb for a cohesive look. */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Merriweather:wght@400;500;600&display=swap');
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+  background: #FAF3E0; /* Light beige background */
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFDAB9; /* Soft peach */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A3C34; /* Deep teal */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #123028; /* Darker teal */
+}
+
+/* Sidebar Menu Styling: Styles the fixed vertical sidebar on the left,
+ which is hidden by default and toggled with a menu button. I
+ ncludes styles for the logo, navigation links, cancel button, and social media icons. 
+ Uses a teal background with peach and golden yellow accents, and adds hover effects for interactivity. */
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background: #1A3C34; /* Deep teal */
+  transition: all 0.5s ease;
+  z-index: 999;
+  left: -200px; /* Hidden by default */
+}
+
+.sidebar.active {
+  left: 0; /* Show when active */
+}
+
+.sidebar .menu-btn {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  color: #FAF3E0;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  background: #DAA520; /* Golden yellow */
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.sidebar.active .menu-btn {
+  left: 220px;
+}
+
+.sidebar .cancel-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #FFDAB9;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar.active .cancel-btn {
+  display: block;
+}
+
+.sidebar .sidebar-content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sidebar .logo .logo-img {
+  height: 50px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar .menu {
+  list-style: none;
+}
+
+.sidebar .menu li {
+  margin: 15px 0;
+}
+
+.sidebar .menu a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  color: #FFDAB9; /* Soft peach */
+  transition: all 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+  color: #DAA520; /* Golden yellow */
+  text-shadow: 0 0 5px rgba(218, 165, 32, 0.5);
+}
+
+.sidebar .media-icons {
+  margin-top: 30px;
+  display: flex; /* Use flexbox to align icons inline */
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Vertically align icons */
+  gap: 15px; /* Add spacing between icons */
+}
+
+.sidebar .media-icons a {
+  color: #FFDAB9;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .media-icons a:hover {
+  color: #DAA520;
+  transform: scale(1.2);
+}
+
+/* Main Content Wrapper: Adjusts the margin of the main content to accommodate the sidebar toggle button, 
+ensuring the content doesn’t overlap with the button when the sidebar is hidden. */
+.main-content {
+  margin-left: 50px; /* Space for the sidebar button */
+  padding: 20px;
+}
+
+/* General Section Styling: Defines the base styles for all sections, including padding,
+ animation for a slide-in effect, and content width. Uses Merriweather for body text and Josefin Sans for section titles,
+  with a circular title design. */
+section {
+  padding: 60px 0;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+section .content {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Merriweather', serif;
+}
+
+section .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section .title span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 38px;
+  color: #1A3C34; /* Deep teal */
+  background: #FFDAB9; /* Soft peach */
+  padding: 15px 30px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section: Styles the About section with a flex layout to display a circular profile image and text side by side. 
+The image has a dotted olive green border, and the text overlaps slightly for a dynamic look.
+ Includes a gradient button for downloading the CV. */
+.About .About-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.About .atambo-image {
+  width: 40%;
+  position: relative;
+}
+
+.About .atambo-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px dotted #556B2F; /* Olive green dotted border */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.About .text {
+  width: 55%;
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50px);
+  z-index: 1;
+}
+
+.About .text-one {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: #1A3C34;
+}
+
+.About .text-two {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 64px;
+  color: #DAA520; /* Golden yellow */
+  margin: 5px 0;
+}
+
+.About .text-three {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 38px;
+  color: #556B2F; /* Olive green */
+}
+
+.About .text-four {
+  font-size: 20px;
+  color: #123028;
+  margin: 10px 0;
+}
+
+.About .button {
+  margin-top: 20px;
+}
+
+.About .button button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #DAA520, #FFDAB9);
+  color: #1A3C34;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.About .button button:hover {
+  background: linear-gradient(45deg, #FFDAB9, #DAA520);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+/* Interests Section: Styles the Interests section with a flex layout to display a circular image and a list of interests side by side.
+ The image has a dotted golden yellow border, and the text overlaps slightly for a dynamic look. Uses custom bullet points for the list. */
+.Interests .Interests-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .Interests .left {
+    width: 45%;
+  }
+  
+  .Interests .left img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px dotted #DAA520; /* Golden yellow dotted border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Interests-details .right {
+    width: 50%;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(50px);
+  }
+  
+  section .topic {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 28px;
+    color: #1A3C34;
+    margin-bottom: 15px;
+  }
+  
+  .Interests-details .right p,
+  .Education-details .right p {
+    text-align: justify;
+    color: #123028;
+  }
+  
+  .Interests-details .right ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .Interests-details .right ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .Interests-details .right ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #556B2F;
+    font-size: 20px;
+  }
+  
+  /* Education Section: Styles the Education section with a flex layout to display a circular image and text side by side. 
+  The image has a dotted olive green border, and the text overlaps slightly. 
+  Includes a list of skills and a gradient button for downloading the CV. */
+  .Education .Education-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .Education .left {
+    width: 45%;
+  }
+  
+  .Education .left img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px dotted #556B2F; /* Olive green dotted border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Education-details .right {
+    width: 50%;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50px);
+  }
+  
+  .Education-details .right h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    color: #DAA520;
+    margin: 15px 0;
+  }
+  
+  .Education-details .right ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .Education-details .right ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .Education-details .right ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #DAA520;
+    font-size: 20px;
+  }
+  
+  .Education .button {
+    margin-top: 20px;
+  }
+  
+  .Education .button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #DAA520, #FFDAB9);
+    color: #1A3C34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Education .button button:hover {
+    background: linear-gradient(45deg, #FFDAB9, #DAA520);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Languages Section: Styles the Languages section with a flex layout to display a description of programming skills
+   on the left and skill cards on the right. 
+  Features a peach background, hover effects on the cards, and a large number to indicate experience duration. */
+  .Languages {
+    background: #FFDAB9; /* Soft peach */
+  }
+  
+  .Languages .Languages-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Languages-details .text {
+    width: 50%;
+  }
+  
+  .Languages-details p {
+    color: #123028;
+    text-align: justify;
+  }
+  
+  .Languages-details .Education {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .Languages-details .Education .num {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 80px;
+    color: #1A3C34;
+  }
+  
+  .Languages-details .Education .exp {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #556B2F;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .Languages-details .boxes {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Languages-details .box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .Languages-details .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .Languages-details .boxes .topic {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: #DAA520;
+  }
+  
+  .Languages-details .boxes .per {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px;
+    color: #1A3C34;
+  }
+  /* Projects Section: Styles the Projects section with a flex layout to display project cards in a grid.
+   Each card includes an icon, title, description, and status, styled with a dotted olive green border and hover effects for interactivity. */
+.Projects .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .Projects .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px 15px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 3px dotted #556B2F; /* Olive green dotted border */
+  }
+  
+  .Projects .boxes .box:hover {
+    background: #FFDAB9;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Projects .boxes .box .icon {
+    height: 50px;
+    width: 50px;
+    background: #DAA520;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 0 auto 10px auto;
+    transition: all 0.3s ease;
+  }
+  
+  .Projects .boxes .box:hover .icon {
+    background: #1A3C34;
+  }
+  
+  .Projects .boxes .box .topic {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    color: #1A3C34;
+  }
+  
+  .Projects .boxes .box p {
+    color: #123028;
+  }
+  
+  /* Contact Section: Styles the Contact section with a centered form for visitors to send messages.
+   Features a peach background, a form with fields for name, email, and message, and icons for each field. 
+   Includes a gradient submit button with hover effects. */
+  .contact {
+    background: #FFDAB9;
+  }
+  
+  .contact .text {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    margin-top: 30px;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: #1A3C34;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form label i {
+    margin-right: 10px;
+    color: #DAA520;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #FFDAB9;
+    border-radius: 8px;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #DAA520;
+    box-shadow: 0 0 5px rgba(218, 165, 32, 0.3);
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact .button {
+    text-align: center;
+  }
+  
+  .contact .button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #DAA520, #FFDAB9);
+    color: #1A3C34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact .button button:hover {
+    background: linear-gradient(45deg, #FFDAB9, #DAA520);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Footer: Styles the footer with a teal background and peach text, displaying a copyright notice and the creator's name. 
+  Centered for a clean look. */
+  footer {
+    background: #1A3C34;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  footer .text span {
+    font-size: 16px;
+    color: #FFDAB9;
+  }
+  
+  footer .text span a {
+    color: #DAA520;
+    transition: all 0.3s ease;
+  }
+  
+  footer .text span a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+  }
+  
+  /* Scroll To Top Button: Styles the scroll-to-top button, which is fixed at the bottom-right corner and appears when the user scrolls down.
+   Features a golden yellow background, a circular shape, and hover effects for interactivity. */
+  .scroll-button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #FFFFFF;
+    background: #DAA520;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    transition: all 0.3s ease;
+  }
+  
+  .scroll-button a:hover {
+    background: #1A3C34;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Media Queries: Adjusts the layout for different screen sizes to ensure responsiveness. 
+  Modifies section layouts, image sizes, and sidebar behavior for mobile and tablet devices, ensuring a seamless user experience across all devices. */
+  @media (max-width: 1190px) {
+    section .content {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .Interests .Interests-details,
+    .Education .Education-details,
+    .Languages .Languages-details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Interests .left,
+    .Education .left,
+    .Languages-details .text {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .Interests-details .right,
+    .Education-details .right,
+    .Languages-details .boxes {
+      width: 100%;
+      transform: none;
+    }
+  
+    .Projects .boxes .box {
+      width: calc(100% / 2 - 20px);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .Interests .left img,
+    .Education .left img {
+      height: 300px;
+    }
+  
+    .About .About-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .About .hero-image,
+    .About .text {
+      width: 100%;
+      transform: none;
+    }
+  
+    .About .hero-image img {
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .About .text {
+      margin-top: 30px;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .sidebar {
+      width: 100%;
+      left: -100%;
+    }
+  
+    .sidebar.active {
+      left: 0;
+    }
+  
+    .sidebar .menu-btn {
+      left: 15px;
+    }
+  
+    .sidebar.active .menu-btn {
+      left: calc(100% - 50px);
+    }
+  
+    .main-content {
+      margin-left: 0;
+    }
+  
+    .Projects .boxes .box {
+      width: 100%;
+    }
+  
+    .contact .text {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .About .text-two {
+      font-size: 48px;
+    }
+  
+    .About .text-three {
+      font-size: 30px;
+    }
+  
+    .Languages-details .boxes .per {
+      font-size: 50px;
+    }
+  }

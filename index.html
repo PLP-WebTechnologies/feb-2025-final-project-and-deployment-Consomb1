@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta and Link Tags: This is to Define the character set,
+    page title, and links to external resources like CSS, Font Awesome for icons, 
+    and Google Fonts for typography. The viewport meta tag ensures responsiveness across devices. -->
+  <meta charset="UTF-8" />
+  <title>Collins Atambo | Portfolio</title>
+  <link rel="stylesheet" href="atambo.css" />
+  <!-- Fontawesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lato:wght@400;500;600&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <!-- Scroll to Top Button: A fixed button that appears when the user scrolls down,
+    allowing them to quickly return to the top of the page. 
+    Styled to be circular with a hover effect. -->
+  
+  <div class="scroll-button">
+    <a href="#About"><i class="fas fa-arrow-up"></i></a>
+  </div>
+
+  <!-- Sidebar Menu: A fixed vertical menu on the left side of the page,
+    hidden by default and toggled with a menu button. Contains the logo, navigation links to all sections, 
+    a cancel button to close the menu, and social media icons for Instagram, and LinkedIn. -->
+  <nav class="sidebar">
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar-content">
+      <div class="logo">
+        <a href="#"><img src="atambo1.jpg" alt="Logo" class="logo-img"></a>
+      </div>
+      <ul class="menu">
+        <li><a href="#About">Home</a></li>
+        <li><a href="#Interests">Interests</a></li>
+        <li><a href="#Languages">Languages</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://x.com/yourusername" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/itscollo_ke/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/collinsatambo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper: Wraps all the main sections of the portfolio to ensure proper spacing and alignment with the sidebar.
+    Adjusts the margin to accommodate the sidebar toggle button. -->
+  
+    <div class="main-content">
+    <!-- About Section: Introduces Collins Atambo (me) with a brief bio, including his name, profession, location, and a downloadable CV link.
+      Features a circular profile image with a dotted border, styled to overlap with the text for a dynamic look. -->
+    
+      <section class="About" id="About">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="About-content">
+          <div class="atambo-image">
+            <img src="atambo1.jpg" alt="Collins Atambo" />
+          </div>
+          <div class="text">
+            <div class="text-one">Hello,</div>
+            <div class="text-two">I’m Collins Atambo</div>
+            <div class="text-three">Animal Scientist & Web Developer</div>
+            <div class="text-four">Chuka, Kenya</div>
+            <div class="button">
+              <a href="Atambo_CV.pdf" download><button>Download CV</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests Section: Lists Collins'(me) professional and personal interests in a detailed format. 
+     Includes an image on the left and a list of interests on the right, 
+     styled with a dotted border and overlapping layout for visual appeal. -->
+  
+    <section class="Interests" id="Interests">
+      <div class="content">
+        <div class="title"><span>My Interests</span></div>
+        <div class="Interests-details">
+          <div class="left">
+            <img src="interests.jpeg" alt="Interests Image" />
+          </div>
+          <div class="right">
+            <div class="topic">Fields That Excite Me</div>
+            <ul class="interest-list">
+              <li><strong>Web Development:</strong> Passionate about modern frameworks, responsive design, and tech innovations.</li>
+              <li><strong>Artificial Intelligence in Agriculture:</strong> Exploring AI-driven solutions for disease detection, livestock management, and precision farming.</li>
+              <li><strong>Animal Nutrition Research:</strong> Studying innovative and sustainable feed solutions for livestock.</li>
+              <li><strong>Financial Markets & Data Science:</strong> Interested in algorithmic trading and portfolio management, including working with WorldQuant Brain.</li>
+              <li><strong>Open-Source Contribution:</strong> Engaging with developer communities and improving tech projects.</li>
+              <li><strong>Entrepreneurship:</strong> Building solutions that bridge the gap between farmers and modern technology.</li>
+              <li><strong>Hackathons & Competitions:</strong> Enjoy participating in coding challenges and innovation contests.</li>
+              <li><strong>Travel & Culture:</strong> Exploring new places, cultures, and global advancements in technology.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section: Details my academic background, including his degree and skills acquired. 
+     Features an image on the left and text on the right, with a downloadable CV link. 
+     Styled with a circular image and overlapping layout. -->
+    
+     <section class="Education" id="Education">
+      <div class="content">
+        <div class="title"><span>My Education</span></div>
+        <div class="Education-details">
+          <div class="left">
+            <img src="atambograd.jpg" alt="Education Image" />
+          </div>
+          <div class="right">
+            <p>
+              I hold a <strong>Bachelor’s degree in Animal Science</strong> from <strong>Chuka University</strong>. 
+              My studies focused on <em>animal nutrition, breeding, health, and management</em>, equipping me 
+              with practical and theoretical knowledge in <em>livestock production and sustainable farming</em>. 
+            </p>
+            <h2>Skills Attained</h2>
+            <ul>
+              <li>Livestock nutrition and diet formulation</li>
+              <li>Animal breeding and genetics</li>
+              <li>Disease prevention and animal health management</li>
+              <li>Farm business management and agribusiness</li>
+              <li>Data analysis and research in animal science</li>
+              <li>Animal welfare and sustainable farming practices</li>
+            </ul>
+            <div class="button">
+              <a href="Atambo_CV.pdf" download><button>Download CV</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages Section: Highlights my programming language skills with percentage indicators. 
+     Includes a description of his experience on the left and skill cards on the right, styled with a peach background and hover effects. -->
+    <section class="Languages" id="Languages">
+      <div class="content">
+        <div class="title"><span>Languages</span></div>
+        <div class="Languages-details">
+          <div class="text">
+            <div class="topic">Programming Languages Skills</div>
+            <p>
+              I have a strong foundation in web development with skills in HTML and CSS, allowing me to create well-structured and visually appealing web pages.
+              I also have experience with Python, which helps me handle backend logic, data processing, and automation. 
+              Additionally, I have some knowledge of JavaScript, which enables me to add interactivity and dynamic elements to websites. 
+              With these skills, I can build functional and engaging web applications, and I’m continuously improving to integrate more advanced features into my projects.
+            </p>
+            <div class="Education">
+              <div class="num">1</div>
+              <div class="exp">
+                Month Of <br />
+                Experience
+              </div>
+            </div>
+          </div>
+          <div class="boxes">
+            <div class="box">
+              <div class="topic">HTML</div>
+              <div class="per">80%</div>
+            </div>
+            <div class="box">
+              <div class="topic">CSS</div>
+              <div class="per">70%</div>
+            </div>
+            <div class="box">
+              <div class="topic">JavaScript</div>
+              <div class="per">10%</div>
+            </div>
+            <div class="box">
+              <div class="topic">Python</div>
+              <div class="per">30%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section: Showcases my projects with descriptions and status updates. 
+     Each project is displayed in a card with an icon, styled with a dotted border and hover effects for interactivity. -->
+    
+     <section class="Projects" id="Projects">
+      <div class="content">
+        <div class="title"><span>My Projects</span></div>
+        <div class="boxes">
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <div class="topic">Livestock Farming Web App</div>
+            <p>
+              A web application designed to assist farmers in managing their livestock operations efficiently.
+              It offers features such as tracking animal health, breeding schedules, and feed management, 
+              all aimed at enhancing productivity and profitability in the livestock farming sector.
+            </p>
+            <p>Status: In Progress</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="topic">Animal Feed Research</div>
+            <p>
+              A research project focused on developing innovative and sustainable animal feed solutions.
+              This project aims to improve livestock nutrition, enhance growth rates, and reduce environmental impact.  
+            </p>
+            <p>Status: Not Published</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="topic">PLP Academy Hackathon - Portfolio Challenge</div>
+            <p>
+              A hackathon project where I developed a portfolio website to showcase my skills and projects.
+              This challenge allowed me to demonstrate my web development abilities and creativity in a competitive environment.
+            </p>
+            <p>Status: In Progress</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section: Provides a form for visitors to send messages to Collins(me). 
+     Includes fields for name, email, and message, styled with icons and a peach background. 
+     The form is centered and has a modern design with hover effects on the submit button. -->
+    
+     <section class="contact" id="contact">
+      <div class="content">
+        <div class="title"><span>Contact Me</span></div>
+        <div class="text">
+          <div class="topic">Want to Engage?</div>
+          <p>I’m eager to collaborate on web development, Python automation, or tech-driven solutions. 
+            Whether you have a project in mind, need assistance, or just want to exchange ideas, let’s connect!</p>
+          <div class="contact-form">
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <label for="message"><i class="fas fa-comment"></i> Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              </div>
+              <div class="button">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section: This is to Display a simple footer with a copyright notice and my name.
+      Styled with a teal background and peach text for consistency with the overall design. -->
+    
+      <footer>
+      <div class="text">
+        <span>Created By Collins Atambo | © 2025 All Rights Reserved</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript Link: Links to the external JavaScript file that 
+   handles the sidebar toggle functionality and scroll-to-top button visibility. -->
+  <script src="atambo.js"></script>
+</body>
+
+</html>
